@@ -13,7 +13,7 @@ class AdminSeeder extends Seeder
     public function run()
     {
         
-    	DB::table('admin_tbl')->insert([array(
+    	DB::table('tbl_admin')->insert([array(
             'admin_name' => 'Ruhul Amin',
             'admin_email' => 'ruhulrahman2233@gmail.com',
             'admin_password' => md5('123'),

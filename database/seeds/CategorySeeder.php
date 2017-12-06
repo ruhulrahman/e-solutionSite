@@ -11,42 +11,46 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-	    DB::table('tbl_category')->insert([array(
-	            'categoryName' => 'Technology',
-	            'publication_status' => 1,
-	        ),array(
-	            'categoryName' => 'Electronics',
-	            'publication_status' => 1,
-	        ),array(
-	            'categoryName' => 'Bangladesh',
-	            'publication_status' => 1,
-	        ),array(
-	            'categoryName' => 'International',
-	            'publication_status' => 1,
-	        ),array(
-	            'categoryName' => 'Health',
-	            'publication_status' => 1,
-	        ),array(
-	            'categoryName' => 'Sports',
-	            'publication_status' => 1,
-	        ),array(
-	            'categoryName' => 'Crime',
-	            'publication_status' => 1,
-	        ),array(
-	            'categoryName' => 'General Knowledge',
-	            'publication_status' => 1,
-	        ),array(
-	            'categoryName' => 'Entertainment',
-	            'publication_status' => 1,
-	        ),array(
-	            'categoryName' => 'Law',
-	            'publication_status' => 1,
-	        ),array(
-	            'categoryName' => 'Politics',
-	            'publication_status' => 1,
-	        )
-	    ]);
+	    if(DB::table('users')->get()->count() == 0){
 
+		    DB::table('tbl_category')->insert([array(
+		            'categoryName' => 'Technology',
+		            'publication_status' => 1,
+		        ),array(
+		            'categoryName' => 'Electronics',
+		            'publication_status' => 1,
+		        ),array(
+		            'categoryName' => 'Bangladesh',
+		            'publication_status' => 1,
+		        ),array(
+		            'categoryName' => 'International',
+		            'publication_status' => 1,
+		        ),array(
+		            'categoryName' => 'Health',
+		            'publication_status' => 1,
+		        ),array(
+		            'categoryName' => 'Sports',
+		            'publication_status' => 1,
+		        ),array(
+		            'categoryName' => 'Crime',
+		            'publication_status' => 1,
+		        ),array(
+		            'categoryName' => 'General Knowledge',
+		            'publication_status' => 1,
+		        ),array(
+		            'categoryName' => 'Entertainment',
+		            'publication_status' => 1,
+		        ),array(
+		            'categoryName' => 'Law',
+		            'publication_status' => 1,
+		        ),array(
+		            'categoryName' => 'Politics',
+		            'publication_status' => 1,
+		        )
+		    ]);
+		}else{
+			echo "Table is not empty, therefore NOT";
+		}
 
 
     }

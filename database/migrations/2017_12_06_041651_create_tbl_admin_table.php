@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdminTblTable extends Migration
+class CreateTblAdminTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateAdminTblTable extends Migration
      */
     public function up()
     {
-        Schema::create('admin_tbl', function (Blueprint $table) {
+        Schema::create('tbl_admin', function (Blueprint $table) {
             $table->increments('admin_id');
             $table->string('admin_name', 100);
             $table->string('admin_email', 100);
@@ -28,6 +28,6 @@ class CreateAdminTblTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admin_tbl');
+        Schema::dropIfExists('tbl_admin');
     }
 }
