@@ -22,10 +22,10 @@ class SuperAdminController extends Controller
      */
     public function index()
     {
-        $adminId = Session::get('adminId');
-        if($adminId == Null){
-            return Redirect::to('/admin')->send();
-        }
+        // $adminId = Session::get('adminId');
+        // if($adminId == Null){
+        //     return Redirect::to('/admin')->send();
+        // }
         
 
         $sidemenu = view('admin.pages.sidemenu');

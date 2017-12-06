@@ -17,31 +17,32 @@ class WelcomeController extends Controller
         // $tbl_blog = DB::table('tbl_blog')
         //                 ->where('publication_status', 1)
         //                 ->get();
-        $tbl_blog = DB::table('tbl_blog')
-            ->join('tbl_category', 'tbl_blog.categoryId', '=', 'tbl_category.categoryId')
-            ->join('admin_tbl', 'tbl_blog.authorId', '=', 'admin_tbl.admin_id')
-            ->select('tbl_blog.*', 'tbl_category.categoryName', 'admin_tbl.admin_name')
-            ->where('tbl_blog.publication_status', 1)
-            ->orderBy('tbl_blog.blogId', 'desc')
-            ->get();
+        // $tbl_blog = DB::table('tbl_blog')
+        //     ->join('tbl_category', 'tbl_blog.categoryId', '=', 'tbl_category.categoryId')
+        //     ->join('admin_tbl', 'tbl_blog.authorId', '=', 'admin_tbl.admin_id')
+        //     ->select('tbl_blog.*', 'tbl_category.categoryName', 'admin_tbl.admin_name')
+        //     ->where('tbl_blog.publication_status', 1)
+        //     ->orderBy('tbl_blog.blogId', 'desc')
+        //     ->get();
 
-        $recent_blog_tbl = DB::table('tbl_blog')
-            ->where('publication_status', 1)
-            ->orderBy('blogId', 'desc')
-            ->limit(3)
-            ->get();
+        // $recent_blog_tbl = DB::table('tbl_blog')
+        //     ->where('publication_status', 1)
+        //     ->orderBy('blogId', 'desc')
+        //     ->limit(3)
+        //     ->get();
 
-        $home_content = view('pages.home_content')
-                            ->with('BlogTable', $tbl_blog);
-        $recent_blog = view("pages.recent_blog")
-                            ->with('recentBlogTable', $recent_blog_tbl);
-        $tbl_category = DB::table('tbl_category')
-                            ->where('publication_status', 1)
-                            ->orderby('categoryName', 'asc')
-                            ->get();
-        return view('home')->with('content', $home_content)
-                            ->with('recent_blog', $recent_blog)
-                            ->with('Category', $tbl_category);
+        // $home_content = view('pages.home_content')
+        //                     ->with('BlogTable', $tbl_blog);
+        // $recent_blog = view("pages.recent_blog")
+        //                     ->with('recentBlogTable', $recent_blog_tbl);
+        // $tbl_category = DB::table('tbl_category')
+        //                     ->where('publication_status', 1)
+        //                     ->orderby('categoryName', 'asc')
+        //                     ->get();
+        // return view('home')->with('content', $home_content)
+        //                     ->with('recent_blog', $recent_blog)
+        //                     ->with('Category', $tbl_category);
+        return view('index');
     }
 
 

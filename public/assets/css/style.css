@@ -1,0 +1,131 @@
+.container{padding-right:15px;
+padding-left:15px;
+margin-right:auto;
+margin-left:auto;
+height:auto;}
+
+
+
+
+.img-responsive
+{
+	display: block;
+	max-width: 300px;
+	height: auto;
+}
+
+#services{
+	background: black;
+}
+
+#services h2{
+	color: #46D7FE;
+}
+.single_service{
+	color: #FFF;
+}
+.single_service h4{
+	color: #00F6FF;;
+}
+.single_service ul{
+	margin: 0;
+	list-style:none;
+}
+.single_service ul li{
+	text-align:left;
+	margin-bottom: 10px;
+}
+.single_service ul li i{
+	color: yellow;
+}
+
+#team{
+	background: #000;
+	color: #FFF;
+}
+.team-member{}
+.team-member img{
+	width:250px;
+	height:250px;
+	transition: 500ms ease;
+}
+.team-member img:hover{
+	border: none;
+	box-shadow: 0px 0px 23px 11px #00EDFF;
+	transform: scale(1.1);
+	
+}
+.team-member p{}
+.team-member p i{
+	margin-right:10px;
+	color: gray;
+}
+#team h2{
+	color: #46D7FE;
+}
+
+#team h4{
+	color: #46D7FE;
+}
+
+
+
+
+#contact{
+
+}
+#contact h2{
+	color: #46D7FE !important;
+}
+#contact h3{}
+
+
+
+
+.footer_area{
+	background: #333333;
+	color: #FFF;
+	
+}
+.footer_top{}
+.footer_top h2{
+	color: #46D7FE;
+	text-decoration: underline;
+}
+.footer_top p i{
+	font-size: 100px;
+	color: #ff00ea;
+}
+
+.footer_top p{
+	font-size: 20px;
+}
+.footer_top p span{
+	color: #ff00ea;
+}
+.footer_top ul{
+	
+}
+.footer_top ul li{}
+.footer_top ul li a{}
+.footer_top ul li a i{}
+.footer_down{
+	padding-bottom: 0px;
+}
+.footer_down p{
+	padding: 15px 0px;
+	border-top:1px solid gray;
+}
+.footer_down p span{}
+
+
+#port{
+	background-image: url("../img/portback.jpg");
+}
+#port h2{
+	color: #00FF81;
+}
+
+#port .view{
+	box-shadow: 0px 0px 8px 5px #2c2525;
+}

@@ -14,6 +14,8 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+
 //Public Foler Goes from here
 Route::get('/', 'WelcomeController@index');
 Route::get('portfolio', 'WelcomeController@portfolio');
@@ -25,6 +27,46 @@ Route::get('contact.ruhul', 'WelcomeController@contact');
 
 //Admin Controller Here || GET Method Below===============================
 Route::get('/admin', 'AdminController@index');
+Route::get('/admin/index2', 'AdminController@index2');
+Route::get('/admin/index3', 'AdminController@index3');
+Route::get('/admin/form_page', 'AdminController@form_page');
+Route::get('/admin/form_advanced', 'AdminController@form_advanced');
+Route::get('/admin/form_validation', 'AdminController@form_validation');
+Route::get('/admin/form_wizards', 'AdminController@form_wizards');
+Route::get('/admin/form_upload', 'AdminController@form_upload');
+Route::get('/admin/form_buttons', 'AdminController@form_buttons');
+Route::get('/admin/general_elements', 'AdminController@general_elements');
+Route::get('/admin/media_gallery', 'AdminController@media_gallery');
+Route::get('/admin/typography', 'AdminController@typography');
+Route::get('/admin/icons', 'AdminController@icons');
+Route::get('/admin/glyphicons', 'AdminController@glyphicons');
+Route::get('/admin/widgets', 'AdminController@widgets');
+Route::get('/admin/invoice', 'AdminController@invoice');
+Route::get('/admin/inbox', 'AdminController@inbox');
+Route::get('/admin/calendar', 'AdminController@calendar');
+Route::get('/admin/tables', 'AdminController@tables');
+Route::get('/admin/tables_dynamic', 'AdminController@tables_dynamic');
+Route::get('/admin/chartjs', 'AdminController@chartjs');
+Route::get('/admin/chartjs2', 'AdminController@chartjs2');
+Route::get('/admin/morisjs', 'AdminController@morisjs');
+Route::get('/admin/echarts', 'AdminController@echarts');
+Route::get('/admin/other_charts', 'AdminController@other_charts');
+Route::get('/admin/fixed_sidebar', 'AdminController@fixed_sidebar');
+Route::get('/admin/fixed_footer', 'AdminController@fixed_footer');
+Route::get('/admin/e_commerce', 'AdminController@e_commerce');
+Route::get('/admin/projects', 'AdminController@projects');
+Route::get('/admin/project_detail', 'AdminController@project_detail');
+Route::get('/admin/contacts', 'AdminController@contacts');
+Route::get('/admin/profile', 'AdminController@profile');
+Route::get('/admin/page_403', 'AdminController@page_403');
+Route::get('/admin/page_404', 'AdminController@page_404');
+Route::get('/admin/page_500', 'AdminController@page_500');
+Route::get('/admin/plain_page', 'AdminController@plain_page');
+Route::get('/admin/plain_page', 'AdminController@plain_page');
+Route::get('/admin/pricing_tables', 'AdminController@pricing_tables');
+Route::get('/admin/level2', 'AdminController@level2');
+
+
 Route::get('/admin/login', 'AdminController@login');
 Route::get('/logout', 'SuperAdminController@logout');
 Route::get('/admin/register', 'AdminController@register');
