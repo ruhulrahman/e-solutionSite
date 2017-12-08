@@ -13,21 +13,17 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-
-        $this->call(
-            AdminSeeder::class,
-            CategorySeeder::class,
-            UsersSeeder::class,);
-
-
-
-    function arraySeed($array) {
-        foreach($array as $elem){
-            $this->call($elem);
+         $cls = [
+                AdminSeeder::class,
+                CategorySeeder::class,
+                UsersSeeder::class,
+            ];
+        foreach ($cls as $c) {
+           $this->call($c);
         }
-    }
-
-
-
+ 
+        // $this->call(AdminSeeder::class);
+        // $this->call(UsersSeeder::class);
+        // $this->call(CategorySeeder::class);
     }
 }

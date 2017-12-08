@@ -14,37 +14,20 @@ class CategorySeeder extends Seeder
 	    if(DB::table('users')->get()->count() == 0){
 
 		    DB::table('tbl_category')->insert([array(
-		            'categoryName' => 'Technology',
+		            'categoryName' => 'Website design and Development',
+		            'categoryIcon' => '<i class="fa fa-laptop fa-stack-1x fa-inverse"></i>',
 		            'publication_status' => 1,
 		        ),array(
-		            'categoryName' => 'Electronics',
+		            'categoryName' => 'Hardware Servicing',
+		            'categoryIcon' => '<i class="fa fa-cog fa-stack-1x fa-inverse"></i>',
 		            'publication_status' => 1,
 		        ),array(
-		            'categoryName' => 'Bangladesh',
+		            'categoryName' => 'Networking Service',
+		            'categoryIcon' => '<i class="fa fa-desktop fa-stack-1x fa-inverse"></i>',
 		            'publication_status' => 1,
 		        ),array(
-		            'categoryName' => 'International',
-		            'publication_status' => 1,
-		        ),array(
-		            'categoryName' => 'Health',
-		            'publication_status' => 1,
-		        ),array(
-		            'categoryName' => 'Sports',
-		            'publication_status' => 1,
-		        ),array(
-		            'categoryName' => 'Crime',
-		            'publication_status' => 1,
-		        ),array(
-		            'categoryName' => 'General Knowledge',
-		            'publication_status' => 1,
-		        ),array(
-		            'categoryName' => 'Entertainment',
-		            'publication_status' => 1,
-		        ),array(
-		            'categoryName' => 'Law',
-		            'publication_status' => 1,
-		        ),array(
-		            'categoryName' => 'Politics',
+		            'categoryName' => 'Sales and Services',
+		            'categoryIcon' => '<i class="fa fa-bandcamp fa-stack-1x fa-inverse"></i>',
 		            'publication_status' => 1,
 		        )
 		    ]);

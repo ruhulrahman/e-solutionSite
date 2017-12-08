@@ -18,7 +18,6 @@
 
 //Public Foler Goes from here
 Route::get('/', 'WelcomeController@index');
-Route::get('portfolio', 'WelcomeController@portfolio');
 Route::get('services', 'WelcomeController@services');
 Route::get('contact.ruhul', 'WelcomeController@contact');
 
@@ -97,6 +96,10 @@ Route::get('/admin/category-edit/{id}', 'SuperAdminController@categoryEditById')
 
 
 //Admin Controller Here || POST Method Below===============================
+
+Route::post('contact_message', 'WelcomeController@contact_message');
+
+
 Route::post('/admin/admin_login_check', 'AdminController@admin_login_check');
 
 //Post Category =================

@@ -42,7 +42,41 @@ class WelcomeController extends Controller
         // return view('home')->with('content', $home_content)
         //                     ->with('recent_blog', $recent_blog)
         //                     ->with('Category', $tbl_category);
-        return view('index');
+        $sevices_page = view('pages.services');
+        $portfolio_page = view('pages.portfolio');
+        $team_page = view('pages.team');
+        $contact_us_page = view('pages.contact_us');
+        return view('index')->with('Services', $sevices_page)
+                            ->with('Portfolio', $portfolio_page)
+                            ->with('Team', $team_page)
+                            ->with('Contact_Us', $contact_us_page);
+    }
+
+
+    public function contact_message(Request $request){
+        $name = $request->name;
+        $email = $request->email;
+        $phone = $request->phone;
+        $message = $request->message;
+
+
+        $query_result = DB::table('contact_msg')->insert(
+                            [
+                            'name' => $name, 
+                            'email' => $email,
+                            'phone' => $phone,
+                            'message' => $message
+                            ]
+ 
+                        );
+
+        if($query_result){
+            Session::put('message', 'Thanx for sending message');  
+
+            return Redirect::to('/');
+        }else{
+            Session::put('exception', 'Message did not send!');
+        }
     }
 
 
